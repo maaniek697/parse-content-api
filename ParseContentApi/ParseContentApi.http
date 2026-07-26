@@ -1,0 +1,26 @@
+### CSV
+POST http://localhost:5199/api/v1/parse-content
+Content-Type: application/json
+
+{
+  "type": "CSV",
+  "content": "aWQsbmFtZSxwcmljZQoxLEthd2EsMTIuNTAKMixIZXJiYXRhLDkuOTAK"
+}
+
+### INTERNAL_JSON
+POST http://localhost:5199/api/v1/parse-content
+Content-Type: application/json
+
+{
+  "type": "INTERNAL_JSON",
+  "content": "W3siaWQiOjEsIm5hbWUiOiJLYXdhIiwiYWN0aXZlIjp0cnVlfSx7ImlkIjoyLCJuYW1lIjoiSGVyYmF0YSIsImFjdGl2ZSI6ZmFsc2V9XQ=="
+}
+
+### Błąd - zły typ
+POST http://localhost:5199/api/v1/parse-content
+Content-Type: application/json
+
+{
+  "type": "XML",
+  "content": "dGVzdA=="
+}
